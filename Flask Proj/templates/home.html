@@ -1,0 +1,57 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-image: url('/static/background.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            color: #f9f6f6; 
+            text-align: center; 
+            padding: 50px;
+        }
+
+        h2 {
+            font-size:500%;
+            font-family:Cambria;/* Cochin, Georgia, Times, 'Times New Roman', serif;*/
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block; /* Make labels block elements to appear on new lines */
+            margin-bottom: 10px; /* Add margin to the bottom of labels */
+            color: #fff; /* Set label text color to match the text */
+        }
+
+        p {
+            color: #fff;
+            font-size: 200%;
+            text-decoration:none;
+            display: block;
+            margin-top: 50px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration:none;
+            display: inline-block;
+            margin-top: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>Welcome to the Future</h2>
+
+    {% if username %}
+        <p>Hello, {{ username }}!</p>
+        <a href="/logout">Logout</a>
+    {% else %}
+        <a href="/login" target="_blank">Login for a Better Experience</a>
+    {% endif %}
+</body>
+</html>
